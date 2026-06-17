@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pre-meeting brief — Acme Q3 Platform Expansion Review</title>
+<style>
+  :root { --ink:#1a2332; --muted:#5b6776; --line:#e3e8ef; --accent:#2563eb;
+          --amber:#b45309; --amber-bg:#fef3c7; --chip:#eef2f7; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#f4f6f9; color:var(--ink);
+         font:15px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  .page { max-width:820px; margin:32px auto; background:#fff; padding:48px 56px;
+          border:1px solid var(--line); border-radius:12px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .brand { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+  h1 { font-size:25px; margin:6px 0 14px; line-height:1.25; }
+  .meta { display:grid; grid-template-columns:auto 1fr; gap:4px 16px; font-size:13.5px;
+          color:var(--muted); margin-bottom:18px; }
+  .meta b { color:var(--ink); font-weight:600; }
+  .withheld { background:var(--amber-bg); color:var(--amber); border:1px solid #fcd9a3;
+              border-radius:8px; padding:10px 14px; font-size:13.5px; margin:0 0 26px; }
+  h2 { font-size:15px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted);
+       border-bottom:1px solid var(--line); padding-bottom:6px; margin:28px 0 12px; }
+  .snapshot { background:#f8fafc; border-left:3px solid var(--accent); padding:12px 16px;
+              border-radius:0 8px 8px 0; }
+  .band { font-size:11px; background:#dbeafe; color:#1e40af; border-radius:999px;
+          padding:1px 8px; margin-left:8px; vertical-align:middle; }
+  ul { list-style:none; padding:0; margin:0; }
+  li { padding:10px 0; border-bottom:1px dashed var(--line); }
+  li:last-child { border-bottom:none; }
+  .cite { display:block; font-size:12.5px; color:var(--muted); margin-top:3px; }
+  .cite a { color:var(--accent); text-decoration:none; }
+  .cite a:hover { text-decoration:underline; }
+  .chip { font-size:11px; background:var(--chip); color:var(--muted); border-radius:999px;
+          padding:1px 8px; margin-right:6px; }
+  .chip.app { background:#1f2937; color:#fff; text-transform:uppercase; letter-spacing:.03em; }
+  .chip.redact { background:#fee2e2; color:#b91c1c; }
+  .chip.sev { background:#fee2e2; color:#b91c1c; }
+  footer { margin-top:30px; padding-top:14px; border-top:1px solid var(--line);
+           font-size:12px; color:var(--muted); }
+  @media print { body{background:#fff;} .page{border:none;box-shadow:none;margin:0;} }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brand">Context Fabric · pre-meeting brief</div>
+  <h1>Acme Q3 Platform Expansion Review</h1>
+  <div class="meta">
+    <span>When</span><span><b>16 Jun 2026, 15:00 UTC</b></span>
+    <span>Account</span><span><b>Acme Corp</b></span>
+    <span>Prepared for</span><span><b>Morgan Smith</b> — sales manager</span>
+    <span>Generated</span><span>15 Jun 2026 · confidence <b>high</b></span>
+  </div>
+
+  <div class="withheld">
+    Synthesized across Salesforce, Email, Jira, ServiceNow, and Slack — filtered to what you're
+    permitted to see. <b>2 item(s) were withheld by policy</b> and are not shown.
+  </div>
+
+  <h2>Account snapshot <span class="band">internal band</span></h2>
+  <div class="snapshot">
+    Acme is in late-stage talks on the platform expansion. They have made <b>SSO + SCIM a hard
+    prerequisite for signing</b> and have raised a <b>pricing concern</b> on the expansion. A
+    security review call is being arranged, and the close plan is moving through legal and finance review.
+  </div>
+
+  <h2>Deal status &amp; open opportunities</h2>
+  <ul>
+    <li>
+      Opportunity “Acme – Platform Expansion”: stage moved <b>Negotiation → Proposal</b>;
+      amount <b>[redacted]</b>; close date pushed <b>31 Aug → 15 Sep 2026</b>.
+      <span class="chip app">salesforce</span><span class="chip">confidential</span><span class="chip redact">redacted: amount</span>
+      <span class="cite"><a href="https://acme.my.salesforce.com/006Ti000001">Acme – Platform Expansion ↗</a> · 12 Jun 2026</span>
+    </li>
+  </ul>
+
+  <h2>Recent customer email</h2>
+  <ul>
+    <li>
+      “Acme need SSO and SCIM confirmed in writing before signing; their security team also wants
+      to see an audit-log capability.”
+      <span class="chip app">email</span><span class="chip">internal</span>
+      <span class="cite"><a href="https://mail.example/thread/thr-118#msg-5567">SSO/SCIM requirement before signing ↗</a> · 10 Jun 2026</span>
+    </li>
+    <li>
+      “Legal review is scheduled and the security review call is set for next week. Still need
+      finance sign-off on the revised expansion number before the Q3 review.”
+      <span class="chip app">email</span><span class="chip">confidential</span>
+      <span class="cite"><a href="https://mail.example/thread/thr-119#msg-5572">Re: Acme close plan ↗</a> · 13 Jun 2026</span>
+    </li>
+  </ul>
+
+  <h2>Engineering &amp; ticket status</h2>
+  <ul>
+    <li>
+      <b>ACME-481</b> “Implement SSO + SCIM provisioning for Acme” — <b>In Progress</b>.
+      Acceptance: SAML login against Acme's Okta; SCIM create/update/deprovision within 5 minutes;
+      audit log of all provisioning events.
+      <span class="chip app">jira</span><span class="chip">internal</span>
+      <span class="cite"><a href="https://acme.atlassian.net/browse/ACME-481">ACME-481 ↗</a> · 12 Jun 2026</span>
+    </li>
+  </ul>
+
+  <h2>Incidents &amp; escalations</h2>
+  <ul>
+    <li>
+      <b>INC-7781</b> <span class="chip sev">escalated · high</span> Acme SSO login failures after
+      the 13 Jun deploy; ~400 users blocked; suspected SCIM provisioning change. Related: ACME-481.
+      Similar prior: INC-7702.
+      <span class="chip app">servicenow</span>
+      <span class="cite"><a href="https://acme.service-now.com/incident.do?sys_id=INC-7781">INC-7781: Acme SSO login failures ↗</a> · 14 Jun 2026</span>
+    </li>
+    <li>
+      INC-7702 [resolved]: SSO intermittent errors last month; resolved by an IdP config rollback,
+      no code change required.
+      <span class="chip app">servicenow</span><span class="chip">internal</span>
+      <span class="cite"><a href="https://acme.service-now.com/incident.do?sys_id=INC-7702">INC-7702: SSO intermittent errors ↗</a> · 20 May 2026</span>
+    </li>
+  </ul>
+
+  <h2>Risks &amp; open items</h2>
+  <ul>
+    <li>
+      Acme flagged a <b>pricing concern</b> on the expansion; finance may need to weigh in.
+      <span class="chip app">slack</span><span class="chip">internal</span>
+      <span class="cite"><a href="https://acme.slack.com/archives/C123/p1700000002">#acme-project ↗</a> · 11 Jun 2026</span>
+    </li>
+    <li>
+      Committed to a <b>security review call</b> next week as a condition of signing.
+      <span class="chip app">slack</span><span class="chip">internal</span>
+      <span class="cite"><a href="https://acme.slack.com/archives/C123/p1700000001">#acme-project ↗</a> · 11 Jun 2026</span>
+    </li>
+  </ul>
+
+  <footer>
+    Sources: salesforce, email, jira, servicenow, slack. 2 related item(s) withheld by policy.
+    Field-level redaction applied where required. Generated by Context Fabric — verify against
+    source systems before acting.
+  </footer>
+</div>
+</body>
+</html>

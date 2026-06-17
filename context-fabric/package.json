@@ -1,0 +1,31 @@
+{
+  "name": "context-fabric",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Context Fabric — the secure context layer for enterprise AI. Phase 0 vertical-slice prototype.",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "demo": "tsx src/demo/run.ts",
+    "api": "tsx src/api/server.ts",
+    "mcp": "tsx src/mcp/server.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "better-sqlite3": "^11.3.0",
+    "fastify": "^4.28.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  }
+}
